@@ -1,47 +1,51 @@
 <template>
+  
+    
+  <div class="" id="app">
 
+     <div class="container grid-xs py-2">
 
-  <div class=""  id="app">
-
-    <div class="container grid-xs py-2">
-
-          <header class="navbar">
+        <header class="navbar">
 
               <section class="navbar-section">
+              <router-link to="/" class="btn btn-link "> Home </router-link>
+              <router-link to="/display" class="btn btn-link"> Tarefas </router-link>
+              <img class="img-responsive" src="@/assets/task.png" alt="CoffeeTagTodo">
+              <a href="#" class="btn btn-link"> GitHub </a>
+              <a href="#" class="btn btn-link"> YouTube </a>
 
-                  <router-link to="/" class="btn btn-link"> Home </router-link>
-                  <router-link to="/display" class="btn btn-link"> Tarefas </router-link>
-                  <img class="img-responsive" src="@/assets/task.png" alt="CoffeeTag">
+            </section>
+          
+            
+        </header>
 
-                   <a href="#" class="btn btn-link">YouTube</a>
-                  <a href="#" class="btn btn-link">GitHub</a>
-                
-               
-              </section>
+      </div>
 
-      </header>
+   <router-view />
 
-     </div> 
+  </div>
 
-
-
-
-
-
-
-    <router-view />
-
-    </div>
-  
 </template>
 
+<script>
+
+ 
+
+
+</script>
 
 
 <style scoped>
 
-  img {
-    max-width: 100px;
-    margin: 0 auto;
-  }
+    img {
 
+      max-width: 100px; 
+      margin: 0 auto;
+
+    }
+
+   
+  
 </style>
+
+

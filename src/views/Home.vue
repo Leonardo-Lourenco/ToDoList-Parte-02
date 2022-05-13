@@ -10,7 +10,7 @@
         <div class="input-group">
           
           <input type="text" v-model="tarefa.description" class="form-input" placeholder="Adicionar Tarefa">
-          <button class="btn btn-success input-group-btn "><i class="icon icon-arrow-right"></i> Adicionar </button>
+          <button class="btn btn-success input-group-btn " :class="{ loading }"><i class="icon icon-arrow-right"></i> Adicionar </button>
           
         </div>
 
@@ -70,41 +70,46 @@
       },
 
       data() {
-        return { tarefas: [], tarefa: { checked: false } };
+
+        return { tarefa: { checked: false } };
+
+      },
+
+      computed: {
+
+        tarefas () {
+          return this.$store.state.tarefas;
+        },
+
+        loading() {
+          return this.$store.state.loading;
+        }
 
       },
 
       methods: {
 
-        addTarefa(tarefa) {
-        tarefa.id = Date.now();
-        this.tarefas.push(tarefa);
-        this.tarefa = { checked: false };
+        // OBS: Este método fizemos ele lá no VUEEX
+        async addTarefa(tarefa) {
+
+          await this.$store.dispatch("addTarefa", tarefa);
+          this.tarefa = { checked: false };
+ 
         },
 
+
+        // OBS: Este método fizemos ele lá no VUEEX
         toggleTarefa (tarefa) {
 
-          const index = this.tarefas.findIndex(item => item.id === tarefa.id)
-          if (index > -1){
-            const checked = !this.tarefas[index].checked;
-            //this.$set(this.tarefas, index, { ...this.tarefas[index], checked });
-            this.tarefas[index].checked = checked;
-            
-
-          }
+          this.$store.dispatch("toggleTarefa", tarefa);
 
         },
-
+        
+        // OBS: Este método fizemos ele lá no VUEEX
         removeTarefa(tarefa) {
 
-          const index = this.tarefas.findIndex(item => item.id === tarefa.id)
-
-          if(index > -1) {
-
-             this.tarefas.splice(index, 1);
-            
-          }
-
+            this.$store.dispatch("removeTarefa", tarefa);
+          
         }
 
       }
