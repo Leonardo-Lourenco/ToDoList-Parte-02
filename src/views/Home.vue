@@ -10,7 +10,7 @@
         <div class="input-group">
           
           <input type="text" v-model="tarefa.description" class="form-input" placeholder="Adicionar Tarefa">
-          <button class="btn btn-success input-group-btn " :class="{ loading }"><i class="icon icon-arrow-right"></i> Adicionar </button>
+          <button class="btn btn-success input-group-btn "  :class="{ loading }"><i class="icon icon-arrow-right"></i> Adicionar </button>
           
         </div>
 
@@ -77,7 +77,7 @@
 
       computed: {
 
-        tarefas () {
+        tarefas() {
           return this.$store.state.tarefas;
         },
 
@@ -89,26 +89,22 @@
 
       methods: {
 
-        // OBS: Este método fizemos ele lá no VUEEX
         async addTarefa(tarefa) {
 
           await this.$store.dispatch("addTarefa", tarefa);
           this.tarefa = { checked: false };
- 
+
         },
 
-
-        // OBS: Este método fizemos ele lá no VUEEX
         toggleTarefa (tarefa) {
 
           this.$store.dispatch("toggleTarefa", tarefa);
 
         },
-        
-        // OBS: Este método fizemos ele lá no VUEEX
+
         removeTarefa(tarefa) {
 
-            this.$store.dispatch("removeTarefa", tarefa);
+          this.$store.dispatch("removeTarefa", tarefa);
           
         }
 

@@ -1,22 +1,5 @@
 <template>
     <div>
-
-        <p> Hey Guyss</p>
-
-        
-
+        <p> Hey Guys! </p>
     </div>
-
 </template>
-
-<script>
-
-
-export default {
-
-    
-
-
-};
-   
-</script>
