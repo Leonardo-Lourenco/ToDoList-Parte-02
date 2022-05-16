@@ -13,9 +13,7 @@
 
             <button @click="$emit('toggle', tarefa)" class="btn btn-primary"> 
                 <span v-if="tarefa.checked"> Desmarcar </span>
-                <span v-else> Concluido </span>
-                
-                
+                <span v-else> Concluido </span>              
             </button>
 
             <button @click="$emit('remove', tarefa)" class="btn btn-error"> Remover  </button>
@@ -32,12 +30,16 @@
 
 
 <script>
+
     export default {
+
         name: "Tarefa",
+
         props: {
             tarefa: { type: Object, required: true}
         }
     };
+
 </script>
 
 

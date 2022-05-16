@@ -1,4 +1,4 @@
-# todolistyoutube
+# todolist
 
 ## Project setup
 ```

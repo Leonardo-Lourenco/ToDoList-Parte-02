@@ -5,12 +5,12 @@
       
      
 
-      <form @submit.prevent="addTarefa(tarefa)">
+      <form @submit.prevent="incluirTarefa(tarefa)">
 
         <div class="input-group">
           
           <input type="text" v-model="tarefa.description" class="form-input" placeholder="Adicionar Tarefa">
-          <button class="btn btn-success input-group-btn "  :class="{ loading }"><i class="icon icon-arrow-right"></i> Adicionar </button>
+          <button class="btn btn-success input-group-btn " :class="{ loading }"><i class="icon icon-arrow-right"></i> Adicionar </button>
           
         </div>
 
@@ -57,6 +57,7 @@
 <script>
 
    import Tarefa from '@/components/Tarefa'
+   import { mapActions, mapState  } from 'vuex';
   
 
     export default {
@@ -77,36 +78,24 @@
 
       computed: {
 
-        tarefas() {
-          return this.$store.state.tarefas;
-        },
-
-        loading() {
-          return this.$store.state.loading;
-        }
+         ...mapState(['tarefas', 'loading']),
+ 
 
       },
 
       methods: {
 
-        async addTarefa(tarefa) {
+        ...mapActions(['addTarefa', 'toggleTarefa', 'removeTarefa']),
 
-          await this.$store.dispatch("addTarefa", tarefa);
-          this.tarefa = { checked: false };
+        // OBS: Este método fizemos ele lá no VUEEX
+        async incluirTarefa(tarefa) {
 
+          await this.addTarefa(tarefa);
+          this.tarefa = { checked: false }; // alteração no estado local
+ 
         },
 
-        toggleTarefa (tarefa) {
-
-          this.$store.dispatch("toggleTarefa", tarefa);
-
-        },
-
-        removeTarefa(tarefa) {
-
-          this.$store.dispatch("removeTarefa", tarefa);
-          
-        }
+      
 
       }
 
