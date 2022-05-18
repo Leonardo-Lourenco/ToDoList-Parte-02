@@ -10,7 +10,7 @@
         <div class="input-group">
           
           <input type="text" v-model="tarefa.description" class="form-input" placeholder="Adicionar Tarefa">
-          <button class="btn btn-success input-group-btn " :class="{ loading }"><i class="icon icon-arrow-right"></i> Adicionar </button>
+          <button class="btn btn-success input-group-btn "  :class="{ loading }"><i class="icon icon-arrow-right"></i> Adicionar </button>
           
         </div>
 
@@ -57,7 +57,7 @@
 <script>
 
    import Tarefa from '@/components/Tarefa'
-   import { mapActions, mapState  } from 'vuex';
+   import { mapActions, mapState } from 'vuex';
   
 
     export default {
@@ -78,24 +78,25 @@
 
       computed: {
 
-         ...mapState(['tarefas', 'loading']),
- 
 
+        ...mapState(['tarefas', 'loading ']),
+
+      
       },
 
       methods: {
 
+        
         ...mapActions(['addTarefa', 'toggleTarefa', 'removeTarefa']),
 
-        // OBS: Este método fizemos ele lá no VUEEX
+        
         async incluirTarefa(tarefa) {
 
           await this.addTarefa(tarefa);
-          this.tarefa = { checked: false }; // alteração no estado local
+          this.tarefa = { checked: false }; 
  
         },
-
-      
+  
 
       }
 

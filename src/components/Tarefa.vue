@@ -1,19 +1,21 @@
 <template>
 
-    <div class="tile flex-centured" :class="{ checked: tarefa.checked}">
+    <div class="tile tile-centered" :class="{ checked: tarefa.checked}">
 
-        <dir class="tile-content">
+        <div class="tile-content">
 
             <div class="tile-subtitle">  {{ tarefa.description }}</div>
             
 
-        </dir>
+        </div>
 
-        <div class="tile-action">
+        <div>
 
             <button @click="$emit('toggle', tarefa)" class="btn btn-primary"> 
                 <span v-if="tarefa.checked"> Desmarcar </span>
-                <span v-else> Concluido </span>              
+                <span v-else> Concluido </span>
+                
+                
             </button>
 
             <button @click="$emit('remove', tarefa)" class="btn btn-error"> Remover  </button>
@@ -30,16 +32,12 @@
 
 
 <script>
-
     export default {
-
         name: "Tarefa",
-
         props: {
             tarefa: { type: Object, required: true}
         }
     };
-
 </script>
 
 
@@ -48,6 +46,12 @@
     .checked {
         text-decoration: line-through;
         color: lightslategray;
+    }
+
+    .tile{
+        margin-top: 1rem;
+        padding: 20px;
+        box-shadow: 0 0.25rem 1rem rgba(63, 127, 191, 1);
     }
 
 </style>
