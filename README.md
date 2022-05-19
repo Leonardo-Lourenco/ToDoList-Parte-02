@@ -1,23 +1,19 @@
 # ToDo List com Vue Js Version 03
 
 ## Instalar Node JS
-```
 npm install node
-```
+
 
 ## Instalar Vue JS
-```
 npm install vue
 
 ### Criar o Projeto
 vue add NOME_DO_PROJETO
-```
 
-```
 ### Rodar o Projeto
-```
+
 npm run serve
-```
+
 
 ### Documentação Vue JS
 See [Configuration Reference](https://cli.vuejs.org/config/).
