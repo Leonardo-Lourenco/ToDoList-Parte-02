@@ -6,14 +6,19 @@ npm install node
 ```
 
 ## Instalar Vue JS
+```
 npm install vue
+```
 
 ### Criar o Projeto
+```
+```
 vue add NOME_DO_PROJETO
 
 ### Rodar o Projeto
-
+```
 npm run serve
+```
 
 
 ### Documentação Vue JS
