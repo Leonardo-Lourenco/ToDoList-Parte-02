@@ -19,7 +19,12 @@ vue add NOME_DO_PROJETO
 ```
 npm run serve
 ```
+### Neste projeto foi utilizado as tecnologias com base no Vue JS:
 
+Vue JS;
+Vuex;
+Vue-Router;
+Spectre.css;
 
 ### Documentação Vue JS
 See [Configuration Reference](https://cli.vuejs.org/config/).
