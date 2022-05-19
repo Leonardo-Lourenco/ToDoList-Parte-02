@@ -10,9 +10,9 @@ npm install node
 npm install vue
 
 ### Criar o Projeto
-```
 vue add NOME_DO_PROJETO
 ```
+
 ```
 ### Rodar o Projeto
 ```
