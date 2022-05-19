@@ -8,13 +8,16 @@ npm install node
 ## Instalar Vue JS
 ```
 npm install vue
-```
 
-### Rodar o JSON Server
+### Criar o Projeto
 ```
-npm run backend
+vue add NOME_DO_PROJETO
 ```
-
+```
+### Rodar o Projeto
+```
+npm run serve
+```
 
 ### Documentação Vue JS
 See [Configuration Reference](https://cli.vuejs.org/config/).
