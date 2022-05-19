@@ -23,4 +23,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 See [Configuration Reference](https://nodejs.org/en/).
 
 ### Projeto passo a passo YouTube
-See [Assistir as Vídeo Aulas]([https://www.youtube.com/watch?v=bu5GFKrqWWc&list=PLFYSYBoGvrksWwhDWeCPj9SWFhjKHPfcM](https://www.youtube.com/watch?v=o6otjlm4UQI&list=PLFYSYBoGvrktNH_1gNC4wCufcRI4SpyTe)).
+See [Assistir as Vídeo Aulas]([https://www.youtube.com/watch?v=bu5GFKrqWWc&list=PLFYSYBoGvrksWwhDWeCPj9SWFhjKHPfcM](https://www.youtube.com/watch?v=o6otjlm4UQI&list=PLFYSYBoGvrktNH_1gNC4wCufcRI4SpyTe).
